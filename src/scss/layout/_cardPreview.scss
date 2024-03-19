@@ -1,5 +1,5 @@
 .preview {
-  background-image: linear-gradient(to bottom, $silver, $paleGrey);
+  background-image: linear-gradient(to bottom, $mintGreen, $white);
   padding: 88px 0 40px 0;
   @include flexColumn;
   align-items: center;
@@ -50,7 +50,7 @@
     color: $gunMetal;
   }
 }
-.profile__image{
+.profile__image {
   background-image: url(/images/ImageBackground.jpg);
   background-position: center;
   background-size: cover;

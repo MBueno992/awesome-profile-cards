@@ -1,26 +1,24 @@
 .landing {
-  background-color: $whiteFour;
+  background: linear-gradient(to bottom, $peach, $selectiveYellow);
   @include flexColumn;
   @include centerCenter;
   align-content: center;
   justify-content: center;
   padding-bottom: 40px;
   min-height: 85vh;
+  color: $colorBlack;
   &__image {
-    width: 300px;
-    padding: 35px;
+    width: 320px;
     @media (min-width: 768px) {
       width: 400px;
     }
   }
   &__title {
     font-family: $fontMerriweather;
-    color: $dullOrange;
     font-size: 19.5px;
   }
   &__text {
     font-family: $fontOpenSans;
-    color: $darkGreenBlue;
     font-size: 1.28rem;
     margin: 0 28px 18px;
   }
@@ -28,10 +26,10 @@
     display: flex;
     justify-content: space-around;
     @include centerCenter;
-    color: $dullOrange;
+    color: $colorBlack;
     font-size: 2.24rem;
     gap: 24px;
-    border: solid 1.6px $dullOrange;
+    border: solid 1.6px $colorBlack;
     border-radius: 4px;
     padding: 30px;
     height: 74px;
@@ -43,20 +41,25 @@
     }
   }
   &__button {
-    background-color: $dirtyBlue;
+    background-color: transparent;
     font-family: $fontOpenSans;
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: $whiteTwo;
-    border-radius: 21px;
+    color: #333;
+    border: 2px solid #252525;
+    border-radius: 30px;
     text-decoration: none;
-    padding: 10px 20px;
-    margin-top: 38.6px;
+    padding: 12px 30px;
+    margin-top: 40px;
     margin-bottom: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    letter-spacing: 2px;
     &:hover {
-      cursor: pointer;
-      background-color: $dullOrange;
-      color: $whiteTwo;
+      background-color: $mintGreen;
+      border: none;
+      color: black;
       box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
         0 8px 12px 6px rgb(60 64 67 / 15%);
     }
