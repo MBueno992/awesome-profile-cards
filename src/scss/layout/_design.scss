@@ -1,0 +1,134 @@
+.formDesign {
+  margin: 0 20px;
+  @include flexColumn;
+  border-color: transparent;
+  border-bottom: 1px solid $whiteThree;
+  @media (min-width: 768px) {
+    margin: 0 30px 0 40px;
+  }
+}
+.colours {
+  color: $gunMetal;
+  font-size: 1.4rem;
+  font-family: $fontOpenSans;
+  padding-left: 39px;
+}
+
+.section {
+  @include flexColumn;
+  align-items: flex-end;
+  border-color: transparent;
+  gap: 20px;
+
+  &__rectangOne {
+    display: flex;
+
+    &--colorDark {
+      background-color: $darkGreenBlue;
+      @include paletteSize;
+    }
+    &--colorDirty {
+      background-color: $dirtyBlue;
+      @include paletteSize;
+    }
+    &--colorHospital {
+      background-color: $hospitalGreen;
+      @include paletteSize;
+    }
+    &--input1 {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__rectangTwo {
+    display: flex;
+
+    &--colorDried {
+      background-color: $driedBlood;
+      @include paletteSize;
+    }
+    &--colorRusty {
+      background-color: $rustyRed;
+      @include paletteSize;
+    }
+    &--colorTomato {
+      background-color: $tomato;
+      @include paletteSize;
+    }
+    &--input2 {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__rectangThree {
+    padding-bottom: 20px;
+    display: flex;
+
+    &--colorSlate {
+      background-color: $slate;
+      @include paletteSize;
+    }
+    &--colorFaded {
+      background-color: $fadedOrange;
+      width: 30px;
+    }
+    &--colorLight {
+      background-color: $lifeGreyBlue;
+      width: 30px;
+    }
+    &--input3 {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.borderbottom {
+  background-color: $whiteThree;
+  height: 1px;
+  margin: 0 20px;
+}
+
+.palette1 {
+  .card {
+    &__name {
+      color: $darkGreenBlue;
+    }
+    &__data {
+      border-color: $dirtyBlue;
+    }
+  }
+  .nav__links--icon {
+    border-color: $hospitalGreen;
+  }
+}
+
+.palette2 {
+  .card {
+    &__name {
+      color: $driedBlood;
+    }
+    &__data {
+      border-color: $rustyRed;
+    }
+  }
+  .nav__links--icon {
+    border-color: $tomato;
+  }
+}
+
+.palette3 {
+  .card {
+    &__name {
+      color: $slate;
+    }
+    &__data {
+      border-color: $fadedOrange;
+    }
+  }
+  .nav__links--icon {
+    border-color: $lifeGreyBlue;
+  }
+}

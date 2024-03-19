@@ -1,0 +1,67 @@
+.landing {
+  background-color: $whiteFour;
+  @include flexColumn;
+  @include centerCenter;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 40px;
+  min-height: 85vh;
+  &__image {
+    width: 300px;
+    padding: 35px;
+    @media (min-width: 768px) {
+      width: 400px;
+    }
+  }
+  &__title {
+    font-family: $fontMerriweather;
+    color: $dullOrange;
+    font-size: 19.5px;
+  }
+  &__text {
+    font-family: $fontOpenSans;
+    color: $darkGreenBlue;
+    font-size: 1.28rem;
+    margin: 0 28px 18px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    @include centerCenter;
+    color: $dullOrange;
+    font-size: 2.24rem;
+    gap: 24px;
+    border: solid 1.6px $dullOrange;
+    border-radius: 4px;
+    padding: 30px;
+    height: 74px;
+
+    &--options {
+      color: $gunMetal;
+      font-family: $fontOpenSans;
+      font-size: 1.28rem;
+    }
+  }
+  &__button {
+    background-color: $dirtyBlue;
+    font-family: $fontOpenSans;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $whiteTwo;
+    border-radius: 21px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 38.6px;
+    margin-bottom: 30px;
+    &:hover {
+      cursor: pointer;
+      background-color: $dullOrange;
+      color: $whiteTwo;
+      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+        0 8px 12px 6px rgb(60 64 67 / 15%);
+    }
+    @media (min-width: 768px) {
+      margin-bottom: 59px;
+    }
+  }
+}

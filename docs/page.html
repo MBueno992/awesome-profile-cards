@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>B-cards. Tarjetas molonas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script
+      src="https://kit.fontawesome.com/8e478fa44e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/main-91648a74.css">
+  </head>
+
+  <body>
+    <header class="header">
+  <a href="./index.html"
+    ><img class="header__image" src="./images/B-cards.png" alt="Logo"
+  /></a>
+</header>
+
+    <main class="bodyPage">
+      <section class="preview">
+   <button class="preview__reset js-cardReset"><i class="fa-regular fa-trash-can"></i> Reset</button> 
+  <article class="card js-card">
+    <div class="card__data">
+        <h2 class="card__name js-cardName">Nombre Apellido</h3>
+        <h3 class="card__job js-cardJob">Front-end developer</h4>
+    </div>
+    <div class="profile__image js__profile-image"></div>
+    <nav class="nav">
+      <a href="" class="nav__links js-mobileLink"
+        ><i class="fa-solid fa-mobile-screen-button nav__links--icon"></i
+      ></a>
+      <a href="" class="nav__links js-mailLink" target="_blank"><i class="fa-regular fa-envelope nav__links--icon"></i></a>
+      <a href="" class="nav__links js-linkedinLink" target="_blank"><i class="fa-brands fa-linkedin-in nav__links--icon"></i></i></a>
+      <a href="" class="nav__links js-githubLink" target="_blank"><i class="fa-brands fa-github-alt nav__links--icon"></i></a>
+    </nav>
+  </article>
+</section>
+
+      <form class="formStyle">
+        
+<fieldset class="formDesign js-fieldset">
+  <section class="formTitle js-options js-design">
+    <span class="formTitle__icon"
+      ><i class="fa-regular fa-object-ungroup"></i
+    ></span>
+    <p class="formTitle__text">Diseña</p>
+    <span class="formTitle__arrow"
+      ><i class="fa-solid fa-chevron-up arrowUp"></i
+    ></span>
+  </section>
+
+  <div class="colours container">
+    <p>COLORES</p>
+
+    <section class="section">
+      <div class="section__rectangOne palette1">
+        <input
+          type="radio"
+          name="select"
+          class="js_palette1 js-select1 section__rectangOne--input1"
+          value="1"
+          checked
+        />
+        <div class="section__rectangOne--colorDark"></div>
+        <div class="section__rectangOne--colorDirty"></div>
+        <div class="section__rectangOne--colorHospital"></div>
+      </div>
+
+      <div class="section__rectangTwo palette2">
+        <input
+          type="radio"
+          name="select"
+          class="js_palette2 section__rectangTwo--input2"
+          value="2"
+        />
+        <div class="section__rectangTwo--colorDried"></div>
+        <div class="section__rectangTwo--colorRusty"></div>
+        <div class="section__rectangTwo--colorTomato"></div>
+      </div>
+
+      <div class="section__rectangThree palette3">
+        <input
+          type="radio"
+          name="select"
+          class="js_palette3 section__rectangThree--input3"
+          value="3"
+        />
+        <div class="section__rectangThree--colorSlate"></div>
+        <div class="section__rectangThree--colorFaded"></div>
+        <div class="section__rectangThree--colorLight"></div>
+      </div>
+    </section>
+  </div>
+</fieldset>
+
+<fieldset class="fill js-fieldset hidden">
+  <section class="formTitle js-options js_formFill">
+    <span class="formTitle__icon"><i class="fa-regular fa-keyboard"></i></span>
+    <p class="formTitle__text">Rellena</p>
+    <span class="formTitle__arrow"
+      ><i class="fa-solid fa-chevron-up arrowUp"></i
+    ></span>
+  </section>
+
+  <section class="formContainer js-formContainer container">
+    <div class="formContainer__name">
+      <label for="">Nombre completo</label>
+      <input
+        type="text"
+        placeholder="Ej: Sally Jill"
+        class="js_inputName js-input"
+        id="name"
+        name="name"
+      />
+    </div>
+    <div class="formContainer__job">
+      <label for="" class="">Puesto</label>
+      <input
+        type="text"
+        placeholder="Ej: Front-end unicorn"
+        class="js_inputJob js-input"
+        id="job"
+        name="job"
+      />
+    </div>
+    <div class="formContainer__image">
+      <p class="formContainer__image--title">Imagen de perfil</p>
+      <div class="btnImage">
+        <label for="photo" class="formContainer__image--add">
+          Añadir imagen</label
+        >
+        <input
+          type="file"
+          name="photo"
+          id="photo"
+          accept=".jpg, .jpeg, .png"
+          class="formContainer__image--input js_image js__profile-upload-btn js-input"
+        />
+        <div class="formContainer__square js_miniPreview"></div>
+      </div>
+      <p class="formContainer__image--size js-size"></p>
+    </div>
+
+    <div class="formContainer__email">
+      <label for="">Email</label>
+      <input
+        type="email"
+        placeholder="Ej: sally.hill@gmail.com"
+        class="js_inputEmail js-input"
+        id="email"
+        name="email"
+      />
+    </div>
+    <div class="formContainer__phone">
+      <label for="">Teléfono</label>
+      <input
+        type="number"
+        placeholder="Ej: 555-55-55-55"
+        class="js_inputPhone js-input"
+        id="phone"
+        name="phone"
+      />
+    </div>
+    <div class="formContainer__linkedin">
+      <label for="">Linkedin</label>
+      <input
+        type="text"
+        placeholder="Ej: linkedin.com/in/sally-hill"
+        class="js_inputLinkedin js-input"
+        id="linkedin"
+        name="linkedin"
+      />
+    </div>
+    <div class="formContainer__github">
+      <label for="">Github</label>
+      <input
+        type="email"
+        placeholder="Ej: @sally-hill"
+        class="js_inputGithub js-input"
+        id="github"
+        name="github"
+      />
+    </div>
+  </section>
+</fieldset>
+
+<fieldset class="buttonOrange js-fieldset hidden">
+    <section class="formTitle js-options js-share">
+        <span class="formTitle__icon"><i class="fa-solid fa-share-nodes"></i></span>
+        <p class="formTitle__text">Comparte</p>
+        <span class="formTitle__arrow"><i class="fa-solid fa-chevron-up arrowUp"></i></span>
+    </section>
+    <section class="containerButton container">
+        <button class="buttonOrange__btn js-btnOrange">
+            <i class="fa-regular fa-address-card "> </i></span>
+           crear tarjeta
+        </button>
+        <div class="shareHidden js-shareHidden">
+            <p class="divShare__p js-shareError"></p>
+            <a class="divShare__a js-linkCard"
+                href=""  target="_blank"></a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button twitterShare js-twitter" 
+            data-url= "" target="_blank" data-text= "Os comparto mi tarjeta de presentación" data-hashtags="adalab, Bcards" data-show-count="false"><i class="twitterShare__icon fa-brands fa-x-twitter"></i>Compartir en twitter</a>
+        </div>
+    </section>
+</fieldset>
+
+      </form>
+    </main>
+    <footer class="footer">
+  <h3 class="footer__title">Awesome profile-cards &copy; 2024</h3>
+  <img class="footer__logo" src="./images/logo-adalab.png" alt="logo-adalab" />
+</footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

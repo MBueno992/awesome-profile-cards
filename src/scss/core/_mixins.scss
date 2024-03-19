@@ -1,0 +1,29 @@
+@mixin formText (){
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+@mixin flexColumn (){
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin centerCenter () {
+    text-align: center;
+    align-items: center;
+}
+
+@mixin paletteSize () {
+    width: 30px;
+    height: 25px;
+}
+
+@mixin fontSizeFill () {
+    font-size: 1.4rem;
+    font-family: $fontOpenSans;
+}

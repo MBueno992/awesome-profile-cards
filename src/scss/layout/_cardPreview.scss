@@ -1,0 +1,76 @@
+.preview {
+  background-image: linear-gradient(to bottom, $silver, $paleGrey);
+  padding: 88px 0 40px 0;
+  @include flexColumn;
+  align-items: center;
+  @media (min-width: 768px) {
+    margin: 20px 40px 20px 30px;
+    justify-content: center;
+    padding: 0 45px;
+    width: 40vw;
+    border-radius: 6px;
+  }
+  @media (min-width: 1200px) {
+    width: 60vw;
+  }
+  &__reset {
+    height: 30px;
+    width: 75px;
+    background-color: $silver;
+    border-radius: 50px;
+    border: 1px solid $whiteTwo;
+    font-size: 1.2rem;
+    color: $gunMetal;
+    position: relative;
+    transform: translate(-85px, -20px);
+    text-transform: uppercase;
+  }
+}
+.card {
+  width: 240px;
+  background-color: $whiteTwo;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  &__data {
+    min-height: 42px;
+    border-left: 5px solid $dirtyBlue;
+    margin: 21px 0 10px 0;
+  }
+  &__name {
+    margin-left: 20px;
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: $darkGreenBlue;
+  }
+  &__job {
+    margin-left: 20px;
+    font-family: $fontMontserrat;
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: $gunMetal;
+  }
+}
+.profile__image{
+  background-image: url(/images/ImageBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 240px;
+  width: 240px;
+}
+
+.nav {
+  width: 100%;
+  padding: 10px;
+  &__links {
+    padding: 5px;
+    &--icon {
+      font-size: 1.8rem;
+      justify-content: start;
+      color: $darkGreenBlue;
+      padding: 5px;
+      border: 2px solid $hospitalGreen;
+      border-radius: 50%;
+    }
+  }
+}
