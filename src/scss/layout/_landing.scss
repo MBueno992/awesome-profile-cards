@@ -1,12 +1,17 @@
 .landing {
   background: linear-gradient(to bottom, $peach, $selectiveYellow);
-  @include flexColumn;
-  @include centerCenter;
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   align-content: center;
   justify-content: center;
   padding-bottom: 40px;
-  min-height: 85vh;
   color: $colorBlack;
+  @media (min-width: 768px) {
+    height: 90vh;
+  }
   &__image {
     width: 320px;
     @media (min-width: 768px) {
@@ -25,7 +30,8 @@
   &__items {
     display: flex;
     justify-content: space-around;
-    @include centerCenter;
+    text-align: center;
+    align-items: center;
     color: $colorBlack;
     font-size: 2.24rem;
     gap: 24px;

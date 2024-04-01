@@ -12,13 +12,13 @@
 		"vite-plugin-image-optimizer": "^1.1.7"
 	},
 	"scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build --emptyOutDir",
-    "docs": "vite build --emptyOutDir",
-    "preview": "vite preview",
-    "push-docs": "npm run deploy",
-    "deploy": "vite build --emptyOutDir && git add docs && git commit -m 'Deployed new version of the page to production' && git push"
+		"start": "vite",
+		"dev": "vite",
+		"build": "vite build --emptyOutDir",
+		"docs": "vite build --emptyOutDir",
+		"preview": "vite preview",
+		"push-docs": "npm run deploy",
+		"deploy": "vite build --emptyOutDir && git add docs && git commit -m 'Deployed new version of the page to production' && git push"
 	},
 	"repository": {
 		"type": "git",
@@ -26,5 +26,8 @@
 	},
 	"author": "Adalab",
 	"license": "MIT",
-	"homepage": "https://github.com/adalab/adalab-web-starter-kit"
+	"homepage": "https://github.com/adalab/adalab-web-starter-kit",
+	"dependencies": {
+		"typescript": "^5.4.3"
+	}
 }

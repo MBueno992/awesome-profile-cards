@@ -1,5 +1,6 @@
-.buttonOrange {
-  @include flexColumn;
+.share {
+  display: flex;
+  flex-direction: column;
   border: none;
   border: $dullOrange;
   margin: 0 20px 30px;
@@ -20,7 +21,13 @@
     gap: 0.8rem;
     margin: 30px auto;
     cursor: pointer;
-    @include formText;
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     color: $whiteTwo;
     text-transform: uppercase;
     &:hover {
@@ -29,30 +36,44 @@
       border: 1px solid $dullOrange;
     }
   }
-  &__botLine {
-    background-color: $whiteThree;
-    width: 80vw;
-    height: 1px;
-    margin: 0 20px;
-  }
+  // &__botLine {
+  //   background-color: $whiteThree;
+  //   width: 80vw;
+  //   height: 1px;
+  //   margin: 0 20px;
+  // }
 }
-.divShare {
+.shareLink {
   height: 40vh;
   border: none;
-  @include flexColumn;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
   padding-top: 20px;
   margin-bottom: 5px;
-  &__p {
-    @include formText;
+
+  &__error {
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     color: $gunMetal;
     margin-top: 20px;
     font-size: 1.6rem;
   }
-  &__a {
-    @include formText;
+  &__links {
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     font-family: $fontOpenSans;
     font-size: 1.2rem;
     color: $dullOrange;
@@ -78,7 +99,13 @@
   margin-bottom: 30px;
   cursor: pointer;
   text-decoration: none;
-  @include formText;
+  font-family: $fontOpenSans;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   font-size: 1.4rem;
   font-family: $fontOpenSans;
   color: $whiteTwo;
@@ -94,7 +121,8 @@
 }
 .shareHidden {
   flex-direction: column;
-  @include centerCenter;
+  text-align: center;
+  align-items: center;
   border-top: 1px solid $whiteThree;
   margin: 20px 20px;
   display: none;

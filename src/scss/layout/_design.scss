@@ -1,6 +1,7 @@
 .formDesign {
   margin: 0 20px;
-  @include flexColumn;
+  display: flex;
+  flex-direction: column;
   border-color: transparent;
   border-bottom: 1px solid $whiteThree;
   @media (min-width: 768px) {
@@ -12,63 +13,63 @@
   font-size: 1.4rem;
   font-family: $fontOpenSans;
   padding-left: 39px;
+  text-transform: uppercase;
 }
 
 .section {
-  @include flexColumn;
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
   border-color: transparent;
   gap: 20px;
+  margin-bottom: 18px;
 
-  &__rectangOne {
+  &__option {
     display: flex;
 
     &--colorDark {
       background-color: $darkGreenBlue;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--colorDirty {
       background-color: $dirtyBlue;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--colorHospital {
       background-color: $hospitalGreen;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--input1 {
       margin-right: 10px;
       cursor: pointer;
     }
-  }
-
-  &__rectangTwo {
-    display: flex;
-
     &--colorDried {
       background-color: $driedBlood;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--colorRusty {
       background-color: $rustyRed;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--colorTomato {
       background-color: $tomato;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--input2 {
       margin-right: 10px;
       cursor: pointer;
     }
-  }
-
-  &__rectangThree {
-    padding-bottom: 20px;
-    display: flex;
 
     &--colorSlate {
       background-color: $slate;
-      @include paletteSize;
+      width: 30px;
+      height: 25px;
     }
     &--colorFaded {
       background-color: $fadedOrange;
@@ -84,13 +85,11 @@
     }
   }
 }
-
 .borderbottom {
   background-color: $whiteThree;
   height: 1px;
   margin: 0 20px;
 }
-
 .palette1 {
   .card {
     &__name {

@@ -1,25 +1,27 @@
 .footer {
-  background-color: $whiteTwo;
- @include flexColumn;
+  background: linear-gradient(to bottom, $selectiveYellow, #cc9600);
+  height: 18vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 18px;
-  min-height: 10vh;
-  border-top: solid 1px $whiteThree;
-
+  justify-content: center;
+  padding-top: 10px;
+  gap: 10px;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
-    margin-top: 0;
-    height: 60px;
+    height: 10vh;
   }
   &__logo {
-    width: 103px;
-    margin: 10px 0;
+    width: 60px;
+    @media (min-width: 768px) {
+      width: 80px;
+    }
   }
   &__title {
     font-family: $fontOpenSans;
-    color: $brownishGrey;
+    color: $colorBlack;
     font-size: 1.5rem;
     opacity: 0.5;
     align-self: center;
