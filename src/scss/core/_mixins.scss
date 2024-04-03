@@ -34,3 +34,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin colorOption($bg-color, $width: 30px, $height: 25px) {
+  background-color: $bg-color;
+  width: $width;
+  height: $height;
+}

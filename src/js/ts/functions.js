@@ -86,11 +86,10 @@ const handleDesign = (event) => {
 formContainer.addEventListener('input', handleForm);
 formDesign.addEventListener('input', handleDesign);
 const shareHidden = () => {
-    createLink.style.display = 'flex';
+    generateLink.style.display = 'flex';
     btnOrange.classList.add('btnGrey');
 };
-btnOrange.addEventListener('click', createCard);
-function postDataApi(object) {
+const postDataApi = (object) => {
     fetch('https://dev.adalab.es/api/card/', {
         method: 'POST',
         body: JSON.stringify(object),
@@ -102,8 +101,8 @@ function postDataApi(object) {
         showURL(result);
     })
         .catch((error) => console.log(error));
-}
-function createCard(event) {
+};
+const createCard = (event) => {
     event.preventDefault();
     if (refresh) {
         postDataApi(refresh);
@@ -111,8 +110,9 @@ function createCard(event) {
     else {
         postDataApi(data);
     }
-}
-function showURL(result) {
+};
+btnOrange.addEventListener('click', createCard);
+const showURL = (result) => {
     if (result.success) {
         linkCard.href = result.cardURL;
         linkCard.innerHTML = result.cardURL;
@@ -121,16 +121,16 @@ function showURL(result) {
             'https://twitter.com/intent/tweet?text=%C2%A1Creado%20con%20Bcards!%20(crea%20la%20tuya%20en%20http%3A%2F%2Fmbueno992.github.io%2Fproject-promo-v-module-2-team-2%2F)%20Ver%20tarjeta%3A&url=' +
                 result.cardURL;
         btnOrange.disabled = true;
-        shareError.innerHTML = 'La tarjeta ha sido creada: ';
+        errorMsg.innerHTML = 'La tarjeta ha sido creada: ';
     }
     else {
-        shareError.innerHTML =
+        errorMsg.innerHTML =
             'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
         btnOrange.disabled = false;
         btnOrange.classList.remove('btnGrey');
     }
-}
-function refreshDesign(design) {
+};
+const refreshDesign = (design) => {
     previewCard.classList.remove('palette1', 'palette2', 'palette3');
     if (design.palette === '1') {
         palette1.checked = true;
@@ -144,10 +144,7 @@ function refreshDesign(design) {
         palette3.checked = true;
         previewCard.classList.add('palette3');
     }
-}
-const refresh = JSON.parse(localStorage.getItem('data'));
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js_miniPreview');
+};
 function loadLocalStorage() {
     if (refresh) {
         inputName.value = refresh.name;

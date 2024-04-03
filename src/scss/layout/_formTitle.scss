@@ -1,36 +1,32 @@
-.formTitle {
-    display: grid;
-    grid-template-columns: 21px 1fr 16px;
-    grid-template-rows: 1fr;
-    align-items: center;
-    margin: 10px 0;
-    cursor: pointer;
-    
-    
-    &__icon {
-        font-size: 1.8rem;
-        color: $dullOrange;
-        padding-top: 3px;
-        grid-column: 1/2;
-        
-    }
-    &__text {
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        font-family: $fontOpenSans;
-        color: $gunMetal;
-        font-weight: 600;
-        grid-column: 2/3;
-        width: 180px;
-        margin-left: 10px;
-        
-    }
-    &__arrow {
-        width: 16px;
-        height: 18px;
-        font-size: 1.8rem;
-        color: $gunMetal;
-        grid-column: 3/4;
-      
-    }
+.title {
+  display: grid;
+  grid-template-columns: 21px 1fr 16px;
+  grid-template-rows: 1fr;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+
+  &__icon {
+    font-size: 1.8rem;
+    color: $dullOrange;
+    padding-top: 3px;
+    grid-column: 1/2;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-family: $fontOpenSans;
+    color: $gunMetal;
+    font-weight: 600;
+    grid-column: 2/3;
+    width: 180px;
+    margin-left: 10px;
+  }
+  &__arrow {
+    width: 16px;
+    height: 18px;
+    font-size: 1.8rem;
+    color: $gunMetal;
+    grid-column: 3/4;
+  }
 }

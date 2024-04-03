@@ -1,13 +1,5 @@
 'use strict';
 
-const mainOption = document.querySelectorAll('.js-options');
-const fill = document.querySelector('.js-fill');
-const design = document.querySelector('.js-design');
-const share = document.querySelector('.js-share');
-const fieldset = document.querySelectorAll('.js-fieldset');
-
-
-
 const handleMain = (event: { currentTarget: any; }) => {
   const formOption = event.currentTarget;
   const parent = formOption.parentNode;

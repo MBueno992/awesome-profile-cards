@@ -23,11 +23,7 @@
     cursor: pointer;
     font-family: $fontOpenSans;
     font-size: 1.8rem;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    font-weight: bold;
     color: $whiteTwo;
     text-transform: uppercase;
     &:hover {
@@ -36,14 +32,8 @@
       border: 1px solid $dullOrange;
     }
   }
-  // &__botLine {
-  //   background-color: $whiteThree;
-  //   width: 80vw;
-  //   height: 1px;
-  //   margin: 0 20px;
-  // }
 }
-.shareLink {
+.link {
   height: 40vh;
   border: none;
   display: flex;
@@ -66,20 +56,13 @@
     margin-top: 20px;
     font-size: 1.6rem;
   }
-  &__links {
+  &__linkCard {
     font-family: $fontOpenSans;
-    font-size: 1.8rem;
     font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
     font-family: $fontOpenSans;
     font-size: 1.2rem;
     color: $dullOrange;
     text-decoration: none;
-    flex-wrap: nowrap;
-    align-items: center;
   }
 }
 .twitterShare {
@@ -90,7 +73,6 @@
   border-radius: 3px;
   border: none;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -100,16 +82,9 @@
   cursor: pointer;
   text-decoration: none;
   font-family: $fontOpenSans;
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   font-size: 1.4rem;
   font-family: $fontOpenSans;
   color: $whiteTwo;
-  font-weight: 400;
   &:hover {
     box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
       0 8px 12px 6px rgb(60 64 67 / 15%);

@@ -34,16 +34,16 @@
       font-size: 1.4rem;
       font-family: $fontOpenSans;
       border: solid 1px $hospitalGreen;
-      padding: 3px 0 7px 7px;
+      padding: 7px;
       &::placeholder {
         color: $pinkish-Grey;
+        padding: 2px;
       }
     }
   }
   &__image {
     display: flex;
     flex-direction: column;
-    // grid-column: 1/2;
     font-size: 1.4rem;
     font-family: $fontOpenSans;
     line-height: 1.43;
@@ -56,8 +56,8 @@
       background-color: $dullOrange;
       width: 140px;
       height: 30px;
-      padding-top: 3px;
-      padding-bottom: 7px;
+      align-self: center;
+      padding: 5px;
       margin-right: 20px;
       text-align: center;
     }
@@ -71,7 +71,6 @@
       margin-top: 5px;
     }
   }
-
   &__square {
     width: 30px;
     height: 30px;

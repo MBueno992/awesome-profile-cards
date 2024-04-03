@@ -1,7 +1,7 @@
 'use strict';
 
 const fr = new FileReader();
-const fileField = document.querySelector('.js__profile-upload-btn');
+const fileField = document.querySelector('.js__profile-upload-btn') as HTMLInputElement;
 
 
 
@@ -13,7 +13,7 @@ const fileField = document.querySelector('.js__profile-upload-btn');
  * al tener los datos listos
  * @param {evento} e
  */
-function getImage(e) {
+function getImage(e:Event) {
   const myFile = e.currentTarget.files[0];
   if (myFile.size > 51200) {
     size.innerHTML = 'La imagen no puede superar los 50KB';

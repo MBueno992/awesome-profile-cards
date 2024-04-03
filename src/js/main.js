@@ -1,6 +1,5 @@
-import './variables.js';
-import './functions.js';
-import './getAvatar.js';
-import './reset.js';
-import './collapsable.js';
-
+import "./ts/variables.js";
+import "./ts/functions.js";
+import "./ts/getAvatar.js";
+import "./ts/reset.js";
+import "./ts/collapsable.js";

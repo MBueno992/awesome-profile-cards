@@ -62,7 +62,7 @@ function handleForm(event:Event) {
   localStorage.setItem('data', JSON.stringify(data));
 }
 
-const handleDesign =(event:Event):void=>{
+const handleDesign =(event:Event)  :void=>{
   const inputPalette : number = parseInt((event.target as HTMLInputElement).value);
   previewCard.classList.remove('palette1', 'palette2', 'palette3');
   if (palette1.checked === true) {
@@ -79,14 +79,15 @@ const handleDesign =(event:Event):void=>{
 formContainer.addEventListener('input', handleForm);
 formDesign.addEventListener('input', handleDesign);
 
-const shareHidden = () => {
-  createLink.style.display = 'flex';
+const shareHidden = () : void => {
+  generateLink.style.display = 'flex';
   btnOrange.classList.add('btnGrey');
 };
 
-btnOrange.addEventListener('click', createCard);
 
-function postDataApi(object) {
+
+
+const  postDataApi = (object: object) : void => {
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
     body: JSON.stringify(object),
@@ -100,7 +101,7 @@ function postDataApi(object) {
     .catch((error) => console.log(error));
 }
 
-function createCard(event) {
+const createCard = (event: Event) : void => {
   event.preventDefault();
   if (refresh) {
     postDataApi(refresh);
@@ -108,8 +109,9 @@ function createCard(event) {
     postDataApi(data);
   }
 }
+btnOrange.addEventListener('click', createCard);
 
-function showURL(result) {
+const showURL = (result): void => {
   if (result.success) {
     linkCard.href = result.cardURL;
     linkCard.innerHTML = result.cardURL;
@@ -119,16 +121,16 @@ function showURL(result) {
       result.cardURL;
 
     btnOrange.disabled = true;
-    shareError.innerHTML = 'La tarjeta ha sido creada: ';
+    errorMsg.innerHTML = 'La tarjeta ha sido creada: ';
   } else {
-    shareError.innerHTML =
+    errorMsg.innerHTML =
       'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
     btnOrange.disabled = false;
     btnOrange.classList.remove('btnGrey');
   }
 }
 
-function refreshDesign(design) {
+const refreshDesign = (design) : void => {
   previewCard.classList.remove('palette1', 'palette2', 'palette3');
   if (design.palette === '1') {
     palette1.checked = true;
@@ -141,10 +143,6 @@ function refreshDesign(design) {
     previewCard.classList.add('palette3');
   }
 }
-
-const refresh = JSON.parse(localStorage.getItem('data'));
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js_miniPreview');
 
 function loadLocalStorage() {
   if (refresh) {
