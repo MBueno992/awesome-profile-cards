@@ -15,25 +15,25 @@
       src="https://kit.fontawesome.com/8e478fa44e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/main-91648a74.css">
+    <link rel="stylesheet" href="./assets/main-e1c5b5f5.css">
   </head>
 
   <body>
     <header class="header">
   <a href="./index.html"
-    ><img class="header__image" src="./images/B-cards.png" alt="Logo"
+    ><img class="header__logo" src="./images/awesome.png" alt="Logo"
   /></a>
 </header>
 
     <main class="bodyPage">
       <section class="preview">
-   <button class="preview__reset js-cardReset"><i class="fa-regular fa-trash-can"></i> Reset</button> 
+   <button class="preview__reset js-cardReset"><i class="fa-regular fa-trash-can"></i> Reset</button>
   <article class="card js-card">
     <div class="card__data">
         <h2 class="card__name js-cardName">Nombre Apellido</h3>
         <h3 class="card__job js-cardJob">Front-end developer</h4>
     </div>
-    <div class="profile__image js__profile-image"></div>
+    <div class="profile__image js-profileImage"></div>
     <nav class="nav">
       <a href="" class="nav__links js-mobileLink"
         ><i class="fa-solid fa-mobile-screen-button nav__links--icon"></i
@@ -46,67 +46,62 @@
 </section>
 
       <form class="formStyle">
-        
-<fieldset class="formDesign js-fieldset">
-  <section class="formTitle js-options js-design">
-    <span class="formTitle__icon"
+        <fieldset class="design js-fieldset">
+  <section class="title js-options js-design">
+    <span class="title__icon"
       ><i class="fa-regular fa-object-ungroup"></i
     ></span>
-    <p class="formTitle__text">Diseña</p>
-    <span class="formTitle__arrow"
+    <p class="title__text">Diseña</p>
+    <span class="title__arrow"
       ><i class="fa-solid fa-chevron-up arrowUp"></i
     ></span>
   </section>
-
-  <div class="colours container">
-    <p>COLORES</p>
-
-    <section class="section">
-      <div class="section__rectangOne palette1">
+  <section class="coloursSection container">
+    <p>Colores</p>
+    <aside class="coloursSection__options">
+      <div class="optionPalette palette1">
         <input
           type="radio"
           name="select"
-          class="js_palette1 js-select1 section__rectangOne--input1"
+          class="js_palette1 js-select1 optionPalette__input"
           value="1"
           checked
         />
-        <div class="section__rectangOne--colorDark"></div>
-        <div class="section__rectangOne--colorDirty"></div>
-        <div class="section__rectangOne--colorHospital"></div>
+        <div class="optionPalette__colorDark"></div>
+        <div class="optionPalette__colorDirty"></div>
+        <div class="optionPalette__colorHospital"></div>
       </div>
-
-      <div class="section__rectangTwo palette2">
+      <div class="optionPalette palette2">
         <input
           type="radio"
           name="select"
-          class="js_palette2 section__rectangTwo--input2"
+          class="js_palette2 optionPalette__input"
           value="2"
         />
-        <div class="section__rectangTwo--colorDried"></div>
-        <div class="section__rectangTwo--colorRusty"></div>
-        <div class="section__rectangTwo--colorTomato"></div>
+        <div class="optionPalette__colorDried"></div>
+        <div class="optionPalette__colorRusty"></div>
+        <div class="optionPalette__colorTomato"></div>
       </div>
-
-      <div class="section__rectangThree palette3">
+      <div class="optionPalette palette3">
         <input
           type="radio"
           name="select"
-          class="js_palette3 section__rectangThree--input3"
+          class="js_palette3 optionPalette__input"
           value="3"
         />
-        <div class="section__rectangThree--colorSlate"></div>
-        <div class="section__rectangThree--colorFaded"></div>
-        <div class="section__rectangThree--colorLight"></div>
+        <div class="optionPalette__colorSlate"></div>
+        <div class="optionPalette__colorFaded"></div>
+        <div class="optionPalette__colorLight"></div>
       </div>
-    </section>
-  </div>
+    </aside>
+  </section>
 </fieldset>
 
 <fieldset class="fill js-fieldset hidden">
-  <section class="formTitle js-options js_formFill">
-    <span class="formTitle__icon"><i class="fa-regular fa-keyboard"></i></span>
-    <p class="formTitle__text">Rellena</p>
-    <span class="formTitle__arrow"
+  <section class="title js-options">
+    <span class="title__icon"><i class="fa-regular fa-keyboard"></i></span>
+    <p class="title__text">Rellena</p>
+    <span class="title__arrow"
       ><i class="fa-solid fa-chevron-up arrowUp"></i
     ></span>
   </section>
@@ -193,32 +188,34 @@
   </section>
 </fieldset>
 
-<fieldset class="buttonOrange js-fieldset hidden">
-    <section class="formTitle js-options js-share">
-        <span class="formTitle__icon"><i class="fa-solid fa-share-nodes"></i></span>
-        <p class="formTitle__text">Comparte</p>
-        <span class="formTitle__arrow"><i class="fa-solid fa-chevron-up arrowUp"></i></span>
+<fieldset class="share js-fieldset hidden">
+    <section class="title js-options js-share">
+        <span class="title__icon"><i class="fa-solid fa-share-nodes"></i></span>
+        <p class="title__text">Comparte</p>
+        <span class="title__arrow"><i class="fa-solid fa-chevron-up arrowUp"></i></span>
     </section>
     <section class="containerButton container">
-        <button class="buttonOrange__btn js-btnOrange">
+        <button class="share__btn js-createBtn">
             <i class="fa-regular fa-address-card "> </i></span>
-           crear tarjeta
+           Crear tarjeta
         </button>
-        <div class="shareHidden js-shareHidden">
-            <p class="divShare__p js-shareError"></p>
-            <a class="divShare__a js-linkCard"
+        <!-- En este div de abajo faltaría la clase shareHidden. REVISAR -->
+        <div class="link js-generateLink">
+            <p class="link__error js-errorMsg"></p>
+            <a class="link__linkCard js-linkCard"
                 href=""  target="_blank"></a>
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button twitterShare js-twitter" 
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button twitterShare js-twitter"
             data-url= "" target="_blank" data-text= "Os comparto mi tarjeta de presentación" data-hashtags="adalab, Bcards" data-show-count="false"><i class="twitterShare__icon fa-brands fa-x-twitter"></i>Compartir en twitter</a>
         </div>
     </section>
 </fieldset>
 
+
       </form>
     </main>
     <footer class="footer">
   <h3 class="footer__title">Awesome profile-cards &copy; 2024</h3>
-  <img class="footer__logo" src="./images/logo-adalab.png" alt="logo-adalab" />
+  <img class="footer__logo" src="./images/logo.PNG" alt="logo" />
 </footer>
 
     <script src="./js/main.js"></script>
