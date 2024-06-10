@@ -1,7 +1,11 @@
 .landing {
-  // background: linear-gradient(to bottom, $peach, $selectiveYellow);
-  background-color: $eggshell;
-  height: 82vh;
+  background: rgb(188, 221, 220);
+  background: linear-gradient(
+    to bottom,
+    rgba(188, 221, 220, 1),
+    rgba(244, 245, 245, 1)
+  );
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -9,7 +13,7 @@
   align-content: center;
   justify-content: center;
   padding-bottom: 40px;
-  color: $colorBlack;
+  color: $charcoal;
 
   @media (min-width: 768px) {
     height: 90vh;
@@ -35,7 +39,7 @@
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    color: $colorBlack;
+    color: $charcoal;
     font-size: 2.24rem;
     gap: 24px;
     border: solid 1.6px $colorBlack;
@@ -44,7 +48,7 @@
     height: 74px;
 
     &--options {
-      color: $gunMetal;
+      color: $charcoal;
       font-family: $fontOpenSans;
       font-size: 1.28rem;
     }
@@ -54,7 +58,8 @@
     font-family: $fontOpenSans;
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: #333;
+    color: $charcoal;
+
     border: 2px solid #252525;
     border-radius: 30px;
     text-decoration: none;
@@ -68,7 +73,8 @@
     &:hover {
       background-color: $mintGreen;
       border: none;
-      color: black;
+      color: $charcoal;
+
       box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
         0 8px 12px 6px rgb(60 64 67 / 15%);
     }

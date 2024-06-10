@@ -9,30 +9,57 @@
     margin: 0 30px 171px 40px;
   }
   &__btn {
-    background-color: $dullOrange;
     border: none;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $turquoise;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid $turquoise;
     width: 199px;
     height: 50px;
-    border-radius: 12px;
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
     margin: 30px auto;
+    letter-spacing: 0.05em;
+    background: linear-gradient(to left, $whiteFour, $white);
     cursor: pointer;
-    font-family: $fontOpenSans;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: $whiteTwo;
-    text-transform: uppercase;
     &:hover {
-      background-color: $whiteTwo;
-      color: $dullOrange;
-      border: 1px solid $dullOrange;
+      color: $whiteFour;
+      transform: scale(1.1);
+      outline: 2px solid $whiteFour;
+      box-shadow: 4px 5px 17px -4px #268391;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(72, 214, 196, 1),
+        rgba(7, 172, 151, 1)
+      );
+      transform: skewX(45deg);
+      z-index: -1;
+      transition: width 1000ms;
+    }
+    &:hover::before {
+      width: 250%;
     }
   }
 }
+
 .link {
   height: 40vh;
   border: none;

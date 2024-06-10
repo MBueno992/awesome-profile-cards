@@ -26,14 +26,14 @@ server.listen(port, () => {
 });
 
 //Pinta los proyectos
-server.get('/projects', async (req, res) => {
-  const connect = await getConnection();
-  const sql =
-    'SELECT * FROM authors, projects WHERE authors.idAuthor = projects.fk_idAuthors';
-  const [results] = await connect.query(sql);
-  connect.end();
-  res.json({ success: true, data: results });
-});
+// server.get('/projects', async (req, res) => {
+//   const connect = await getConnection();
+//   const sql =
+//     'SELECT * FROM authors, projects WHERE authors.idAuthor = projects.fk_idAuthors';
+//   const [results] = await connect.query(sql);
+//   connect.end();
+//   res.json({ success: true, data: results });
+// });
 
 //Crear tarjeta
 server.post('/createCard', async (req, res) => {
@@ -61,14 +61,13 @@ server.post('/createCard', async (req, res) => {
 
 server.get('/detail/:idCard', async (req, res) => {
   console.log(req.params);
-  const { idProject } = req.params;
+  const { idCard } = req.params;
   const connect = await getConnection();
-  const selectProject =
-    'SELECT * FROM authors, projects WHERE authors.idAuthor = projects.fk_idAuthors and idProject = ?';
-  const [resultProject] = await connect.query(selectProject, [idProject]);
+  const selectCard = 'SELECT * FROM profileCards WHERE idCard = ?';
+  const [resultCard] = await connect.query(selectCard, [idCard]);
   {
   }
-  res.render('detail', { project: resultProject[0] });
+  res.render('detail', { card: resultCard[0] });
 });
 
 //Servidores estáticos

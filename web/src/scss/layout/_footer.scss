@@ -1,13 +1,16 @@
 .footer {
   // background: linear-gradient(to bottom, $selectiveYellow, #cc9600);
-  background-color: $jet;
-  height: 18vh;
+  background-color: #3b4b5c;
+  // height: 10vh;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  gap: 10px;
+  justify-content: space-around;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  // gap: 10px;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
@@ -15,15 +18,18 @@
     height: 10vh;
   }
   &__logo {
-    width: 60px;
+    width: 45px;
+    height: 45px;
     @media (min-width: 768px) {
       width: 80px;
+      height: 80px;
     }
   }
   &__title {
-    font-family: $fontOpenSans;
+    font-family: $fontMerriweather;
     color: $white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: lighter;
     align-self: center;
   }
 }

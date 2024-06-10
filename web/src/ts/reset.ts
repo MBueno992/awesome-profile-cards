@@ -15,7 +15,7 @@ const resetCardPreview = (data: Record<string,string>) => {
   previewMail.href = previewCardData.email;
   previewLinkedin.href = previewCardData.linkedin;
   previewGithub.href = previewCardData.github;
-  profileImage.style.backgroundImage = previewCardData.photo;
+  profileImage.src = previewCardData.photo;
   profilePreview.style.backgroundImage = previewCardData.photoDiv;
   localStorage.removeItem("data");
 };

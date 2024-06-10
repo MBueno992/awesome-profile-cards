@@ -25,83 +25,58 @@
   </head>
 
   <body class="bodyStyle">
-    <%- include("./header") %>
-    <section class="preview">
-      <a href="/" class="header__btnView">Volver</a>
-      <img
-        class="imagePreview"
-        src="<%= project.image %>"
-        alt="<%= project.name %>"
-      />
-      <section class="card">
-        <div class="card__top">
-          <div class="card__top--dot dot1"></div>
-          <div class="card__top--dot dot2"></div>
-          <div class="card__top--dot dot3"></div>
-        </div>
-        <div class="info">
-          <section class="info__project">
-            <p class="info__project--subtitle">Personal Project Card</p>
-            <hr class="info__project--line" />
-            <h2 class="info__project--title"><%= project.name %></h2>
-            <p class="info__project--slogan"><%= project.slogan %></p>
-            <p class="info__project--description">Product Description</p>
-            <p class="info__project--desc"><%= project.desc %></p>
-            <section class="info__technologies">
-              <p class="info__technologies--text">
-                <%= project.technologies %>
-              </p>
-              <div class="info__technologies--icon">
-                <a
-                  href="<%= project.demo %>"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-solid fa-globe"></i>
-                </a>
-                <a
-                  href="<%= project.repo %>"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </section>
-          </section>
-          <section class="info__author">
-            <img
-              class="info__author--image"
-              src="<%= project.photo %>"
-              alt="<%= project.author %>"
-            />
-            <p class="info__author--job"><%= project.job %></p>
-            <p class="info__author--name"><%= project.author %></p>
-          </section>
+    <main>
+      <section class="viewfinder palette1 typography1">
+        <div class="viewfinder__card">
+          <div class="viewfinder__card-title">
+            <div class="viewfinder__card-title-rectangule"></div>
+            <div class="viewfinder__card-titlebox">
+              <h2 class="viewfinder__card-title-name"><%= card.name %></h2>
+              <h3 class="viewfinder__card-title-job"><%= card.job %></h3>
+            </div>
+          </div>
+          <img
+            src="<%= card.photo %>"
+            alt="<%= card.name %>"
+            class="viewfinder__photo"
+          />
+          <!-- <div
+            class="viewfinder__photo"
+            title="Foto de la tarjeta"
+            style=<%= card.photo %>
+          ></div> -->
+          <div class="viewfinder__icons">
+            <div class="viewfinder__icons-box">
+              <a class="viewfinder__icons-link" href="<%= card.phone %>">
+                <i class="fas fa-mobile-alt"></i>
+              </a>
+            </div>
+            <div class="viewfinder__icons-box">
+              <a class="viewfinder__icons-link" href="mailto:<%= card.email %>">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            <div class="viewfinder__icons-box">
+              <a
+                class="viewfinder__icons-link"
+                href="<%= card.linkedin %>"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <div class="viewfinder__icons-box">
+              <a
+                class="viewfinder__icons-link"
+                href="<%= card.github %>"
+                target="_blank"
+              >
+                <i class="fab fa-github-alt"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-      <div class="shareBtn">
-        <a
-          target="_blank"
-          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fproyectos-molones-xz0d.onrender.com/detail/<%= project.idProject %>&amp;text=¡He subido un proyecto a la página de proyectos molones! Échale un ojo y comparte el tuyo&amp;hashtags=proyectosmolones,adalab"
-          class="twitterBtn"
-        >
-          <i class="fa-brands fa-x-twitter"></i>Compartir en Twitter
-        </a>
-        <a
-          target="_blank"
-          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fproyectos-molones-xz0d.onrender.com/detail/<%= project.idProject %>&amp;"
-          class="facebookBtn"
-        >
-          <i class="fa-brands fa-facebook-f"></i> Compartir en Facebook
-        </a>
-      </div>
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script>
-    </section>
-    <%- include("./footer") %>
+    </main>
   </body>
 </html>
