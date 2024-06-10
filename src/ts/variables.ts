@@ -4,8 +4,7 @@
 const previewCard = document.querySelector('.js-card') as HTMLElement;
 const previewName = document.querySelector('.js-cardName') as HTMLHeadingElement;
 const previewJob = document.querySelector('.js-cardJob') as HTMLHeadingElement;
-// const profileImage = document.querySelector('.js-profileImage') as HTMLDivElement;
-const profileImage = document.querySelector('.js-profileImage') as HTMLImageElement;
+const profileImage = document.querySelector('.js-profileImage') as HTMLDivElement;
 const previewMobile = document.querySelector('.js-mobileLink') as HTMLAnchorElement;
 const previewMail = document.querySelector('.js-mailLink') as HTMLAnchorElement;
 const previewLinkedin = document.querySelector('.js-linkedinLink') as HTMLAnchorElement;

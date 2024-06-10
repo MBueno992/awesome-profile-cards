@@ -59,24 +59,47 @@
     font-size: 1.6rem;
     text-transform: uppercase;
     color: $charcoal;
-
-    border: 2px solid #252525;
+    border: 2px solid $whiteFour;
     border-radius: 30px;
     text-decoration: none;
     padding: 12px 30px;
     margin-top: 40px;
     margin-bottom: 30px;
     cursor: pointer;
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
-    letter-spacing: 2px;
+    color: $whiteFour;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid $turquoise;
+    letter-spacing: 0.05em;
+    background: linear-gradient(
+      to left,
+      rgba(72, 214, 196, 1),
+      rgba(7, 172, 151, 1)
+    );
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
     &:hover {
-      background-color: $mintGreen;
-      border: none;
       color: $charcoal;
-
-      box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
-        0 8px 12px 6px rgb(60 64 67 / 15%);
+      transform: scale(1.1);
+      outline: 1px solid $whiteFour;
+      border: 1px solid $charcoal;
+      box-shadow: 4px 5px 17px -4px #268391;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: $whiteFour;
+      transform: skewX(45deg);
+      z-index: -1;
+      transition: width 1000ms;
+    }
+    &:hover::before {
+      width: 250%;
     }
     @media (min-width: 768px) {
       margin-bottom: 59px;
