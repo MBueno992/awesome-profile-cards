@@ -4,11 +4,11 @@
   "routes": [{ "src": "/(.*)", "dest": "/" }],
   "rewrites": [
     {
-      "src": "./src/index.html",
+      "source": "/src/index.html",
       "destination": "/"
     },
     {
-      "src": "./src/createCard.html",
+      "source": "/src/createCard.html",
       "destination": "/createCard"
     }
   ]
