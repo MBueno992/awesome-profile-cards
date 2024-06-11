@@ -1,0 +1,91 @@
+.fill {
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $whiteThree;
+  margin: 0 20px;
+  @media (min-width: 768px) {
+    margin: 0 30px 0 40px;
+  }
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+  padding-bottom: 30px;
+  &__name,
+  &__job,
+  &__email,
+  &__phone,
+  &__linkedin,
+  &__github {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    font-family: $fontOpenSans;
+    line-height: 1.43;
+    label {
+      color: $darkGreenBlue;
+      margin-bottom: 7px;
+    }
+    input {
+      color: $charcoal;
+      font-size: 1.4rem;
+      font-family: $fontOpenSans;
+      border: solid 1px $turquoise;
+      border-radius: 10px;
+      padding: 7px;
+      &::placeholder {
+        color: $pinkish-Grey;
+        padding: 2px;
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    font-family: $fontOpenSans;
+    line-height: 1.43;
+    &--title {
+      color: $darkGreenBlue;
+      margin-bottom: 7px;
+    }
+    &--add {
+      color: $whiteTwo;
+      background-color: rgba($turquoise, 0.9);
+      border-radius: 10px;
+      width: 140px;
+      height: 30px;
+      align-self: center;
+      padding: 5px;
+      margin-right: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    &--input {
+      display: none;
+      position: relative;
+    }
+    &--size {
+      color: $darkGreenBlue;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+  }
+  &__square {
+    width: 30px;
+    height: 30px;
+    border: solid 1px $turquoise;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.btnImage {
+  display: flex;
+  flex-direction: row;
+}

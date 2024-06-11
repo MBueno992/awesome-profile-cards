@@ -1,0 +1,135 @@
+.share {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border: $dullOrange;
+  margin: 0 20px 30px;
+  border-bottom: 1px solid $whiteThree;
+  @media (min-width: 768px) {
+    margin: 0 30px 171px 40px;
+  }
+  &__btn {
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $turquoise;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid $turquoise;
+    width: 199px;
+    height: 50px;
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 30px auto;
+    letter-spacing: 0.05em;
+    background: linear-gradient(to left, $whiteFour, $white);
+    cursor: pointer;
+    &:hover {
+      color: $whiteFour;
+      transform: scale(1.1);
+      outline: 2px solid $whiteFour;
+      box-shadow: 4px 5px 17px -4px #268391;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(72, 214, 196, 1),
+        rgba(7, 172, 151, 1)
+      );
+      transform: skewX(45deg);
+      z-index: -1;
+      transition: width 1000ms;
+    }
+    &:hover::before {
+      width: 250%;
+    }
+  }
+}
+
+.link {
+  height: 40vh;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+
+  &__error {
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $gunMetal;
+    margin-top: 20px;
+    font-size: 1.6rem;
+  }
+  &__linkCard {
+    font-family: $fontOpenSans;
+    font-weight: 600;
+    font-family: $fontOpenSans;
+    font-size: 1.2rem;
+    color: $turquoise;
+    text-decoration: none;
+  }
+}
+.twitterShare {
+  display: none;
+  background-color: $colorBlack;
+  height: 30px;
+  width: 181px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9.5px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: $fontOpenSans;
+  font-size: 1.4rem;
+  font-family: $fontOpenSans;
+  color: $whiteTwo;
+  &:hover {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+      0 8px 12px 6px rgb(60 64 67 / 15%);
+  }
+  &__icon {
+    font-size: 1.8rem;
+    color: $whiteTwo;
+  }
+}
+.shareHidden {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-top: 1px solid $whiteThree;
+  margin: 20px 20px;
+  display: none;
+}
+
+.btnGrey {
+  background-color: $white;
+}
