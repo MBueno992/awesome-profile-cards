@@ -88,7 +88,7 @@ const shareHidden = () : void => {
 
 
 const  postDataApi = (object: object) : void => {
-  fetch('https://dev.adalab.es/api/card/', {
+  fetch('https://awesome-profile-cards.vercel.app/createCard', {
     method: 'POST',
     body: JSON.stringify(object),
     headers: { 'Content-type': 'application/json' },

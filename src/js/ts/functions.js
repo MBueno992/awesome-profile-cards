@@ -90,7 +90,7 @@ const shareHidden = () => {
     btnOrange.classList.add('btnGrey');
 };
 const postDataApi = (object) => {
-    fetch('https://dev.adalab.es/api/card/', {
+    fetch('https://awesome-profile-cards.vercel.app/createCard', {
         method: 'POST',
         body: JSON.stringify(object),
         headers: { 'Content-type': 'application/json' },
