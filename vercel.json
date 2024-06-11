@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "rewrites": [
+    {
+      "src": "../web/src/index.html",
+      "destination": "/"
+    },
+    {
+      "src": "../web/src/createCard.html",
+      "destination": "/createCard"
+    }
+  ]
+}
