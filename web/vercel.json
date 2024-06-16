@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "rewrites": [
+    {
+      "source": "/src/index.html",
+      "destination": "/"
+    },
+    {
+      "source": "/src/createCard.html",
+      "destination": "/createCard"
+    }
+  ],
+  "redirects": [
+    { "source": "/src/index.html", "destination": "/", "permanent": true },
+    {
+      "source": "/src/createCard.html",
+      "destination": "/createCard",
+      "permanent": true
+    }
+  ]
+}

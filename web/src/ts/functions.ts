@@ -88,7 +88,7 @@ const shareHidden = () : void => {
 
 
 const  postDataApi = (object: object) : void => {
-  fetch('https://awesome-profile-cards.vercel.app/createCard', {
+  fetch('https://awesome-profile-cards.vercel.app/createCard.html/createCard', {
     method: 'POST',
     body: JSON.stringify(object),
     headers: { 'Content-type': 'application/json' },
