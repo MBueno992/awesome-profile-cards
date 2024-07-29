@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node src/index.mjs",
+    "dev": "nodemon src/index.mjs",
     "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/dist ./src/public-react"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@libsql/client": "^0.7.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
